@@ -19,7 +19,8 @@
         }
     ],
     "require": {
-        "php": "^8.2.4"
+        "php": "^8.2.4",
+        "illuminate/http": "^12.16"
     },
     "autoload": {
         "psr-4": {
