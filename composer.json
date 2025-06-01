@@ -1,0 +1,40 @@
+{
+    "name": "passionate-laravel-dev/creatify-php",
+    "description": "PHP package for creatify",
+    "keywords": [
+        "ai",
+        "php",
+        "creatify",
+        "ai-video",
+        "creatify-php",
+        "passionate-laravel-dev"
+    ],
+    "homepage": "https://github.com/passionate-laravel-dev/creatify-php",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Taha",
+            "email": "taha.engineer26@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Passionatelaraveldev\\Creatify\\": "src/"
+        }
+    },
+    "scripts": {
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require-dev": {
+        "laravel/pint": "^1.22"
+    }
+}
