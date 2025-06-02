@@ -18,9 +18,9 @@ enum AspectRatio: string
     public function label(): string
     {
         return match ($this) {
-            self::RATIO_16_9 => 'Ratio 16 9',
-            self::RATIO_1_1 => 'Ratio 1 1',
-            self::RATIO_9_16 => 'Ratio 9 16'
+            self::RATIO_16_9 => 'Ratio 16:9',
+            self::RATIO_1_1 => 'Ratio 1:1',
+            self::RATIO_9_16 => 'Ratio 9:16'
         };
     }
 }
