@@ -18,9 +18,9 @@ enum VideoLength: int
     public function label(): string
     {
         return match ($this) {
-            self::LENGTH_15 => '15',
-            self::LENGTH_30 => '30',
-            self::LENGTH_60 => '60'
+            self::LENGTH_15 => '15s',
+            self::LENGTH_30 => '30s',
+            self::LENGTH_60 => '60s'
         };
     }
 }
