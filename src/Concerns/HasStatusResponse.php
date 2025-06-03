@@ -19,13 +19,23 @@ trait HasStatusResponse
                 'status' => 'success',
                 'resData' => $res->json(),
             ]);
-        } else {
-            Log::error('error: ', [$res->body()]);
+        }
 
+        if ($res->unauthorized()) {
             return FacadesResponse::json([
                 'status' => 'error',
-                'message' => 'Something went wrong',
+                'message' => $res->json('error') ?? 'Unauthorized'
             ]);
         }
+
+        Log::error('Creatify api response error: ', [
+            'status' => $res->status(),
+            'body' => $res->body(),
+        ]);
+
+        return FacadesResponse::json([
+            'status' => 'error',
+            'message' => $res->json('error') ?? 'Unexpected issue happen',
+        ]);
     }
 }
